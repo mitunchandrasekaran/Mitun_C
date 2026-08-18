@@ -1,0 +1,299 @@
+/* Universal selector */
+/* Demonstrates the CSS box model */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Element selector */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef3f8;
+    color: #222;
+}
+
+
+/* Header */
+header {
+    background: #17365d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* Main container */
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* Admission card */
+.admission-card {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+
+    padding: 30px;
+
+    border: 1px solid #d7dce2;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Left information section */
+.information {
+    padding: 10px;
+}
+
+.information h2 {
+    color: #17365d;
+}
+
+
+/* Image */
+.image-container {
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #d7dce2;
+}
+
+.image-container img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* YouTube video */
+.video-container {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* Form section */
+.form-section {
+    padding: 10px;
+}
+
+.form-section h2 {
+    color: #17365d;
+    margin-top: 0;
+}
+
+
+/* Form group */
+.form-group {
+    margin-bottom: 16px;
+}
+
+
+/* Element selector */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+
+/* Input, select and textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #b8c0ca;
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+/* Attribute selector */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+
+/* Pseudo-class selector */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #17365d;
+
+    box-shadow: 0 0 4px rgba(23, 54, 93, 0.3);
+}
+
+
+/* Radio buttons */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+
+/* Terms */
+.terms {
+    margin-top: 15px;
+}
+
+.terms label {
+    font-weight: normal;
+}
+
+
+/* Submit button */
+.submit-btn,
+#newApplication {
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #17365d;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Hover pseudo-class */
+.submit-btn:hover,
+#newApplication:hover {
+    background: #285a91;
+    transform: translateY(-2px);
+}
+
+
+/* Confirmation message */
+.confirmation {
+    display: none;
+
+    background: #e9f8ef;
+
+    border: 2px solid #35a45b;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+
+.confirmation h2 {
+    color: #218844;
+    margin-top: 0;
+}
+
+
+.confirmation-details {
+    background: white;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    margin: 15px 0;
+
+    text-align: left;
+}
+
+
+.confirmation-details p {
+    margin: 8px 0;
+}
+
+
+/* Footer */
+footer {
+    background: #17365d;
+    color: white;
+
+    text-align: center;
+
+    padding: 18px;
+
+    margin-top: 30px;
+}
+
+
+/* Responsive design */
+@media (max-width: 800px) {
+
+    .admission-card {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .admission-card {
+        padding: 18px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Calculator</title>
+
+    <link rel="stylesheet" href="q4.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            GRADE<span>CALC</span>
+        </div>
+
+        <p>Student Performance Calculator</p>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Main calculator -->
+        <section class="calculator-card">
+
+            <!-- Left information panel -->
+            <div class="intro">
+
+                <p class="label">
+                    ACADEMIC PERFORMANCE
+                </p>
+
+                <h1>
+                    Calculate Your
+                    <span>Grade</span>
+                </h1>
+
+                <p class="description">
+                    Enter your marks in the five subjects.
+                    The calculator will automatically calculate
+                    your total, percentage and final grade.
+                </p>
+
+
+                <div class="grade-preview">
+
+                    <div class="preview-item">
+                        <strong>A+</strong>
+                        <span>Excellent</span>
+                    </div>
+
+                    <div class="preview-item">
+                        <strong>A</strong>
+                        <span>Very Good</span>
+                    </div>
+
+                    <div class="preview-item">
+                        <strong>B</strong>
+                        <span>Good</span>
+                    </div>
+
+                    <div class="preview-item">
+                        <strong>C</strong>
+                        <span>Average</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Input section -->
+            <div class="input-section">
+
+                <h2>Enter Your Marks</h2>
+
+                <p class="helper">
+                    Enter marks between 0 and 100.
+                </p>
+
+
+                <form id="gradeForm">
+
+                    <!-- Student name -->
+                    <div class="input-group full-width">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="subjects">
+
+                        <!-- Subject 1 -->
+                        <div class="input-group">
+
+                            <label for="subject1">
+                                Mathematics
+                            </label>
+
+                            <input
+                                type="number"
+                                id="subject1"
+                                min="0"
+                                max="100"
+                                placeholder="0 - 100"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Subject 2 -->
+                        <div class="input-group">
+
+                            <label for="subject2">
+                                Computer Science
+                            </label>
+
+                            <input
+                                type="number"
+                                id="subject2"
+                                min="0"
+                                max="100"
+                                placeholder="0 - 100"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Subject 3 -->
+                        <div class="input-group">
+
+                            <label for="subject3">
+                                Physics
+                            </label>
+
+                            <input
+                                type="number"
+                                id="subject3"
+                                min="0"
+                                max="100"
+                                placeholder="0 - 100"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Subject 4 -->
+                        <div class="input-group">
+
+                            <label for="subject4">
+                                Chemistry
+                            </label>
+
+                            <input
+                                type="number"
+                                id="subject4"
+                                min="0"
+                                max="100"
+                                placeholder="0 - 100"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Subject 5 -->
+                        <div class="input-group">
+
+                            <label for="subject5">
+                                English
+                            </label>
+
+                            <input
+                                type="number"
+                                id="subject5"
+                                min="0"
+                                max="100"
+                                placeholder="0 - 100"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="calculate-btn"
+                    >
+                        Calculate Result
+                    </button>
+
+                    <button
+                        type="button"
+                        id="resetBtn"
+                        class="reset-btn"
+                    >
+                        Clear
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- Error message -->
+        <div id="errorMessage" class="error-message">
+        </div>
+
+
+        <!-- Result section -->
+        <section id="resultSection" class="result-section">
+
+            <div class="result-header">
+
+                <div>
+                    <p class="label">
+                        FINAL RESULT
+                    </p>
+
+                    <h2>
+                        Performance Summary
+                    </h2>
+
+                    <p>
+                        <span id="resultStudent"></span>
+                    </p>
+                </div>
+
+                <div id="gradeCircle" class="grade-circle">
+                    <span id="gradeValue">-</span>
+                </div>
+
+            </div>
+
+
+            <!-- Result cards -->
+            <div class="result-grid">
+
+                <div class="result-card">
+
+                    <span class="result-icon">
+                        ∑
+                    </span>
+
+                    <div>
+                        <p>Total Marks</p>
+
+                        <strong>
+                            <span id="totalMarks">0</span>
+                            / 500
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-icon">
+                        %
+                    </span>
+
+                    <div>
+                        <p>Percentage</p>
+
+                        <strong>
+                            <span id="percentage">0</span>%
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-icon">
+                        ★
+                    </span>
+
+                    <div>
+                        <p>Grade</p>
+
+                        <strong id="gradeText">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-icon">
+                        ✓
+                    </span>
+
+                    <div>
+                        <p>Status</p>
+
+                        <strong id="status">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Subject performance -->
+            <div class="performance">
+
+                <h3>
+                    Subject Performance
+                </h3>
+
+                <div id="subjectResults">
+                </div>
+
+            </div>
+
+
+            <div class="result-message" id="resultMessage">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 GradeCalc | Student Performance Calculator
+        </p>
+
+    </footer>
+
+
+    <script src="q4.js"></script>
+
+</body>
+</html>

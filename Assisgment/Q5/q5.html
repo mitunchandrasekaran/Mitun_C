@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Supermarket Billing System</title>
+
+    <link rel="stylesheet" href="q5.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="brand">
+            <div class="logo">FRESH<span>MART</span></div>
+            <p>Smart Supermarket Billing</p>
+        </div>
+
+        <div class="bill-icon">
+            🛒
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- Page heading -->
+
+        <section class="page-heading">
+
+            <p class="label">
+                BILLING SYSTEM
+            </p>
+
+            <h1>
+                Customer Bill
+            </h1>
+
+            <p>
+                Enter the quantity and unit price for
+                three purchased products.
+            </p>
+
+        </section>
+
+
+        <!-- ================= BILLING CARD ================= -->
+
+        <section class="billing-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Product Details</h2>
+
+                    <p>
+                        Add the purchased products below.
+                    </p>
+                </div>
+
+                <div class="bill-number">
+                    BILL #2026
+                </div>
+
+            </div>
+
+
+            <!-- Table heading -->
+
+            <div class="product-table">
+
+                <div class="table-header">
+
+                    <span>Product</span>
+                    <span>Quantity</span>
+                    <span>Unit Price</span>
+                    <span>Amount</span>
+
+                </div>
+
+
+                <!-- Product 1 -->
+
+                <div class="product-row">
+
+                    <div class="product-name">
+
+                        <div class="product-icon">
+                            🥛
+                        </div>
+
+                        <div>
+                            <strong>Milk</strong>
+                            <small>Daily Essentials</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <input
+                            type="number"
+                            id="quantity1"
+                            min="0"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+
+                    <div class="input-box price-box">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="price1"
+                            min="0"
+                            step="0.01"
+                            placeholder="0.00"
+                        >
+
+                    </div>
+
+
+                    <div class="amount"
+                         id="amount1">
+                        ₹0.00
+                    </div>
+
+                </div>
+
+
+                <!-- Product 2 -->
+
+                <div class="product-row">
+
+                    <div class="product-name">
+
+                        <div class="product-icon">
+                            🍚
+                        </div>
+
+                        <div>
+                            <strong>Rice</strong>
+                            <small>Groceries</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <input
+                            type="number"
+                            id="quantity2"
+                            min="0"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+
+                    <div class="input-box price-box">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="price2"
+                            min="0"
+                            step="0.01"
+                            placeholder="0.00"
+                        >
+
+                    </div>
+
+
+                    <div class="amount"
+                         id="amount2">
+                        ₹0.00
+                    </div>
+
+                </div>
+
+
+                <!-- Product 3 -->
+
+                <div class="product-row">
+
+                    <div class="product-name">
+
+                        <div class="product-icon">
+                            🍎
+                        </div>
+
+                        <div>
+                            <strong>Apples</strong>
+                            <small>Fresh Produce</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <input
+                            type="number"
+                            id="quantity3"
+                            min="0"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+
+                    <div class="input-box price-box">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="price3"
+                            min="0"
+                            step="0.01"
+                            placeholder="0.00"
+                        >
+
+                    </div>
+
+
+                    <div class="amount"
+                         id="amount3">
+                        ₹0.00
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Error message -->
+
+            <div id="errorMessage"
+                 class="error-message">
+            </div>
+
+
+            <!-- ================= SUMMARY ================= -->
+
+            <div class="summary">
+
+                <div class="summary-left">
+
+                    <h3>
+                        Bill Summary
+                    </h3>
+
+                    <p>
+                        Discount of 10% is automatically
+                        applied when the total exceeds
+                        ₹2,000.
+                    </p>
+
+                </div>
+
+
+                <div class="summary-right">
+
+                    <div class="summary-line">
+
+                        <span>
+                            Total Bill
+                        </span>
+
+                        <strong id="totalAmount">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-line discount-line">
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <strong id="discountAmount">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="divider"></div>
+
+
+                    <div class="final-line">
+
+                        <span>
+                            Final Payable Amount
+                        </span>
+
+                        <strong id="finalAmount">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BUTTONS ================= -->
+
+            <div class="buttons">
+
+                <button
+                    type="button"
+                    id="calculateBtn"
+                    class="calculate-btn">
+                    Calculate Bill
+                </button>
+
+                <button
+                    type="button"
+                    id="clearBtn"
+                    class="clear-btn">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUCCESS MESSAGE ================= -->
+
+        <section id="successMessage"
+                 class="success-message">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h2>
+                    Bill Generated Successfully
+                </h2>
+
+                <p id="successText">
+                    Your final payable amount is ₹0.00.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 FreshMart Supermarket
+        </p>
+
+        <p>
+            Thank you for shopping with us!
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="q5.js"></script>
+
+</body>
+</html>

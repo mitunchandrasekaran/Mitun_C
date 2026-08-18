@@ -1,0 +1,690 @@
+/* =====================================================
+   BASIC RESET
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef3f8,
+            #f8fafc
+        );
+
+    color: #18212b;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+    background: #18212b;
+
+    color: white;
+
+    padding: 22px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.logo span {
+    color: #4db6ac;
+}
+
+
+.header p {
+    color: #b9c4cf;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.container {
+    width: 88%;
+
+    max-width: 1150px;
+
+    margin: 50px auto;
+}
+
+
+/* =====================================================
+   CALCULATOR CARD
+   ===================================================== */
+
+.calculator-card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =====================================================
+   INTRODUCTION
+   ===================================================== */
+
+.intro {
+    padding: 50px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #18212b,
+            #263847
+        );
+
+    color: white;
+}
+
+
+.label {
+    color: #4db6ac;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.intro h1 {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin: 18px 0;
+}
+
+
+.intro h1 span {
+    color: #4db6ac;
+}
+
+
+.description {
+    color: #bdc8d1;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   GRADE PREVIEW
+   ===================================================== */
+
+.grade-preview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+
+.preview-item {
+    border: 1px solid #455563;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    background: rgba(255,255,255,0.04);
+}
+
+
+.preview-item strong {
+    display: block;
+
+    font-size: 25px;
+
+    color: #4db6ac;
+}
+
+
+.preview-item span {
+    color: #aebac4;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   INPUT SECTION
+   ===================================================== */
+
+.input-section {
+    padding: 45px;
+}
+
+
+.input-section h2 {
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+
+.helper {
+    color: #78848f;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+
+.input-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d2d9df;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+/* Focus effect */
+.input-group input:focus {
+    border-color: #4db6ac;
+
+    box-shadow:
+        0 0 0 3px rgba(77,182,172,0.12);
+}
+
+
+/* Subjects in multiple columns */
+.subjects {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    column-gap: 15px;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.calculate-btn {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 13px;
+
+    background: #18212b;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.calculate-btn:hover {
+    background: #4db6ac;
+
+    transform: translateY(-2px);
+}
+
+
+.reset-btn {
+    width: 100%;
+
+    margin-top: 9px;
+
+    padding: 11px;
+
+    background: white;
+
+    border: 1px solid #ccd3d9;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: #56616b;
+}
+
+
+.reset-btn:hover {
+    background: #f1f4f6;
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+   ===================================================== */
+
+.error-message {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    background: #fff0f0;
+
+    border: 1px solid #e4aaaa;
+
+    color: #b52b2b;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   RESULT SECTION
+   ===================================================== */
+
+.result-section {
+    display: none;
+
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.08);
+}
+
+
+.result-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e3e7ea;
+}
+
+
+.result-header h2 {
+    font-size: 30px;
+
+    margin: 6px 0;
+}
+
+
+#resultStudent {
+    color: #697681;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   GRADE CIRCLE
+   ===================================================== */
+
+.grade-circle {
+    width: 110px;
+
+    height: 110px;
+
+    border-radius: 50%;
+
+    border: 8px solid #4db6ac;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f2fbfa;
+}
+
+
+.grade-circle span {
+    font-size: 42px;
+
+    font-weight: 900;
+
+    color: #18212b;
+}
+
+
+/* =====================================================
+   RESULT CARDS
+   ===================================================== */
+
+.result-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+
+.result-card {
+    padding: 18px;
+
+    border: 1px solid #e1e6ea;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.result-icon {
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 8px;
+
+    background: #e8f7f5;
+
+    color: #198f84;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.result-card p {
+    font-size: 11px;
+
+    color: #7b8791;
+
+    margin-bottom: 2px;
+}
+
+
+.result-card strong {
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   SUBJECT PERFORMANCE
+   ===================================================== */
+
+.performance {
+    margin-top: 25px;
+}
+
+
+.performance h3 {
+    margin-bottom: 18px;
+}
+
+
+.subject-row {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 3fr 0.6fr;
+
+    gap: 15px;
+
+    align-items: center;
+
+    margin-bottom: 13px;
+}
+
+
+.subject-name {
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.progress-bar {
+    height: 9px;
+
+    background: #e9edef;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.progress {
+    height: 100%;
+
+    width: 0;
+
+    background: #4db6ac;
+
+    border-radius: 10px;
+
+    transition: width 0.8s ease;
+}
+
+
+.subject-mark {
+    text-align: right;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   RESULT MESSAGE
+   ===================================================== */
+
+.result-message {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background: #f1f7f7;
+
+    border-left: 4px solid #4db6ac;
+
+    color: #44515b;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    background: #18212b;
+
+    color: #8996a1;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .calculator-card {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .container {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+    .intro,
+    .input-section {
+        padding: 30px 22px;
+    }
+
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    .subjects {
+        grid-template-columns: 1fr;
+    }
+
+    .result-section {
+        padding: 25px 18px;
+    }
+
+    .result-header {
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .grade-circle {
+        width: 80px;
+        height: 80px;
+
+        border-width: 6px;
+    }
+
+    .grade-circle span {
+        font-size: 30px;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-row {
+        grid-template-columns:
+            1fr 2fr 45px;
+    }
+
+}

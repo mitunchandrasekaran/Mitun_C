@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VOGUEA - Fashion Store</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="q3.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            VOGUE<span>A</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#collections">Collections</a>
+            <a href="#trending">Trending</a>
+            <a href="#offers">Offers</a>
+        </nav>
+
+        <button class="cart-button" onclick="showCart()">
+            🛍 Cart <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                NEW SEASON • 2026
+            </p>
+
+            <h1>
+                STYLE THAT
+                <span> SPEAKS </span>
+            </h1>
+
+            <p class="hero-description">
+                Discover modern fashion designed for
+                confidence, comfort and individuality.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#collections" class="primary-button">
+                    Explore Collection
+                </a>
+
+                <a href="#trending" class="secondary-button">
+                    View Trending
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-design">
+
+            <div class="fashion-circle"></div>
+
+            <div class="floating-card card-one">
+                NEW
+            </div>
+
+            <div class="floating-card card-two">
+                -30%
+            </div>
+
+            <div class="fashion-model">
+                👗
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+            <div class="feature-icon">🚚</div>
+            <div>
+                <h3>Free Shipping</h3>
+                <p>On orders above ₹1,999</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">↩</div>
+            <div>
+                <h3>Easy Returns</h3>
+                <p>7-day return policy</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <div>
+                <h3>Secure Payment</h3>
+                <p>100% secure checkout</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= COLLECTIONS ================= -->
+
+    <section class="section" id="collections">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">
+                    SHOP BY STYLE
+                </p>
+
+                <h2>
+                    Featured Collections
+                </h2>
+            </div>
+
+            <p class="section-description">
+                Carefully selected styles for every
+                occasion and personality.
+            </p>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+            <!-- Collection 1 -->
+            <div class="collection-card collection-one">
+
+                <div class="collection-icon">
+                    👕
+                </div>
+
+                <div class="collection-content">
+                    <p>01</p>
+                    <h3>Everyday Wear</h3>
+                    <a href="#trending">
+                        Explore →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Collection 2 -->
+            <div class="collection-card collection-two">
+
+                <div class="collection-icon">
+                    👗
+                </div>
+
+                <div class="collection-content">
+                    <p>02</p>
+                    <h3>Elegant Looks</h3>
+                    <a href="#trending">
+                        Explore →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Collection 3 -->
+            <div class="collection-card collection-three">
+
+                <div class="collection-icon">
+                    👟
+                </div>
+
+                <div class="collection-content">
+                    <p>03</p>
+                    <h3>Street Style</h3>
+                    <a href="#trending">
+                        Explore →
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TRENDING PRODUCTS ================= -->
+
+    <section class="section trending-section" id="trending">
+
+        <div class="section-heading center-heading">
+
+            <p class="section-label">
+                MOST LOVED
+            </p>
+
+            <h2>
+                Trending Now
+            </h2>
+
+            <p class="section-description">
+                Our customers' favourite picks this season.
+            </p>
+
+        </div>
+
+
+        <!-- Multiple column layout -->
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <article class="product-card">
+
+                <div class="product-image image-one">
+
+                    <span class="badge">
+                        NEW
+                    </span>
+
+                    <span class="product-emoji">
+                        👕
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category">
+                        MEN • CASUAL
+                    </p>
+
+                    <h3>
+                        Essential Cotton Tee
+                    </h3>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹799
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Essential Cotton Tee')">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Product 2 -->
+            <article class="product-card">
+
+                <div class="product-image image-two">
+
+                    <span class="badge sale">
+                        SALE
+                    </span>
+
+                    <span class="product-emoji">
+                        👗
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category">
+                        WOMEN • DRESS
+                    </p>
+
+                    <h3>
+                        Minimal Summer Dress
+                    </h3>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹1,499
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Minimal Summer Dress')">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Product 3 -->
+            <article class="product-card">
+
+                <div class="product-image image-three">
+
+                    <span class="badge">
+                        HOT
+                    </span>
+
+                    <span class="product-emoji">
+                        👟
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category">
+                        UNISEX • SHOES
+                    </p>
+
+                    <h3>
+                        Urban Street Sneakers
+                    </h3>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹2,199
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Urban Street Sneakers')">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Product 4 -->
+            <article class="product-card">
+
+                <div class="product-image image-four">
+
+                    <span class="product-emoji">
+                        👜
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category">
+                        WOMEN • ACCESSORIES
+                    </p>
+
+                    <h3>
+                        Classic Everyday Bag
+                    </h3>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹1,899
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Classic Everyday Bag')">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFER BANNER ================= -->
+
+    <section class="offer" id="offers">
+
+        <div>
+
+            <p class="section-label">
+                LIMITED TIME OFFER
+            </p>
+
+            <h2>
+                Refresh Your Wardrobe
+            </h2>
+
+            <p>
+                Get up to <strong>30% OFF</strong>
+                on selected styles.
+            </p>
+
+        </div>
+
+        <a href="#trending" class="offer-button">
+            Shop Offers →
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            VOGUE<span>A</span>
+        </div>
+
+        <p>
+            Fashion that fits your personality.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#collections">Collections</a>
+            <a href="#trending">Trending</a>
+            <a href="#offers">Offers</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 VOGUEA Fashion Store
+        </p>
+
+    </footer>
+
+
+    <!-- External JavaScript -->
+    <script src="q3.js"></script>
+
+</body>
+</html>

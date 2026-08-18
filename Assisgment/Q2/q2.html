@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Admission Form</title>
+
+    <!-- Link external CSS file -->
+    <link rel="stylesheet" href="q2.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Student Admission Portal</h1>
+        <p>Academic Year 2026 - 2027</p>
+    </header>
+
+
+    <main class="container">
+
+        <!--
+            This confirmation box is hidden initially.
+            JavaScript will display it after successful submission.
+        -->
+        <div id="confirmation" class="confirmation">
+            <h2>✓ Application Submitted Successfully!</h2>
+
+            <p>
+                Thank you for submitting your admission application.
+            </p>
+
+            <div class="confirmation-details">
+                <p><strong>Application ID:</strong>
+                    <span id="applicationId"></span>
+                </p>
+
+                <p><strong>Name:</strong>
+                    <span id="confirmName"></span>
+                </p>
+
+                <p><strong>Course:</strong>
+                    <span id="confirmCourse"></span>
+                </p>
+
+                <p><strong>Email:</strong>
+                    <span id="confirmEmail"></span>
+                </p>
+            </div>
+
+            <p>
+                Your application has been received successfully.
+            </p>
+
+            <button type="button" id="newApplication">
+                Submit Another Application
+            </button>
+        </div>
+
+
+        <!-- Main admission card -->
+        <section class="admission-card">
+
+            <!-- Left side: Admission information -->
+            <div class="information">
+
+                <h2>Begin Your Journey With Us</h2>
+
+                <p>
+                    Fill in the admission form with your personal
+                    and academic details.
+                </p>
+
+
+                <!-- Image -->
+                <div class="image-container">
+
+                    <!--
+                        Replace the src value below with the direct
+                        image URL or local image file you want to use.
+                    -->
+                    <img
+                        src="your-image.jpg"
+                        alt="College Campus"
+                    >
+
+                </div>
+
+
+                <!-- YouTube Video -->
+                <div class="video-container">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/i0oycfxohGA"
+                        title="College Admission Video"
+                        allow="accelerometer; autoplay; clipboard-write;
+                        encrypted-media; gyroscope; picture-in-picture;
+                        web-share"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right side: Admission form -->
+            <div class="form-section">
+
+                <h2>Admission Form</h2>
+
+                <form id="admissionForm">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@gmail.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter phone number"
+                            pattern="[0-9]{10}"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+
+                        <label for="dob">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Gender -->
+                    <div class="form-group">
+
+                        <label>Gender</label>
+
+                        <div class="radio-group">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Male"
+                                    required
+                                >
+                                Male
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Female"
+                                >
+                                Female
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Other"
+                                >
+                                Other
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Course -->
+                    <div class="form-group">
+
+                        <label for="course">
+                            Select Course
+                        </label>
+
+                        <select
+                            id="course"
+                            name="course"
+                            required
+                        >
+
+                            <option value="">
+                                -- Select Course --
+                            </option>
+
+                            <option value="CSE">
+                                Computer Science and Engineering
+                            </option>
+
+                            <option value="ECE">
+                                Electronics and Communication Engineering
+                            </option>
+
+                            <option value="EEE">
+                                Electrical and Electronics Engineering
+                            </option>
+
+                            <option value="IT">
+                                Information Technology
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 12th Percentage -->
+                    <div class="form-group">
+
+                        <label for="percentage">
+                            12th Percentage
+                        </label>
+
+                        <input
+                            type="number"
+                            id="percentage"
+                            name="percentage"
+                            min="0"
+                            max="100"
+                            step="0.01"
+                            placeholder="Enter percentage"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Address -->
+                    <div class="form-group">
+
+                        <label for="address">
+                            Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            placeholder="Enter your address"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Terms and Conditions -->
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            I confirm that the information
+                            provided is correct.
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Submit button -->
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Submit Application
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 Student Admission Portal
+        </p>
+    </footer>
+
+
+    <!-- Link external JavaScript -->
+    <script src="q2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f7f4,
+            #f8faf9
+        );
+
+    color: #1e2924;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+    background: #173d2b;
+
+    color: white;
+
+    padding: 22px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.logo span {
+    color: #70c174;
+}
+
+
+.brand p {
+    color: #b9cabe;
+
+    font-size: 12px;
+
+    margin-top: 3px;
+}
+
+
+.bill-icon {
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 45px auto;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+   ===================================================== */
+
+.page-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.label {
+    color: #32864a;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.page-heading h1 {
+    font-size: 42px;
+
+    margin: 8px 0;
+}
+
+
+.page-heading > p:last-child {
+    color: #718078;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BILLING CARD
+   ===================================================== */
+
+.billing-card {
+    background: white;
+
+    border: 1px solid #dce6df;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(30, 60, 45, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   CARD HEADER
+   ===================================================== */
+
+.card-header {
+    padding: 25px 30px;
+
+    background: #f7faf8;
+
+    border-bottom: 1px solid #e1e9e4;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.card-header h2 {
+    font-size: 22px;
+}
+
+
+.card-header p {
+    color: #7b8881;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+.bill-number {
+    padding: 8px 13px;
+
+    background: #e2f2e6;
+
+    color: #2d7542;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   PRODUCT TABLE
+   ===================================================== */
+
+.product-table {
+    padding: 0 30px;
+}
+
+
+.table-header,
+.product-row {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1.3fr 1.2fr;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.table-header {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e2e8e4;
+
+    color: #7b8780;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.product-row {
+    padding: 22px 0;
+
+    border-bottom: 1px solid #edf1ee;
+}
+
+
+/* =====================================================
+   PRODUCT NAME
+   ===================================================== */
+
+.product-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.product-icon {
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 10px;
+
+    background: #edf7ef;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.product-name strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+
+.product-name small {
+    color: #8a958f;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   INPUTS
+   ===================================================== */
+
+.input-box {
+    position: relative;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ccd8d0;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+
+.input-box input:focus {
+    border-color: #43a45d;
+
+    box-shadow:
+        0 0 0 3px rgba(67,164,93,0.12);
+}
+
+
+.price-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.price-box span {
+    color: #718078;
+
+    font-weight: bold;
+}
+
+
+.price-box input {
+    min-width: 0;
+}
+
+
+/* =====================================================
+   PRODUCT AMOUNT
+   ===================================================== */
+
+.amount {
+    font-weight: bold;
+
+    font-size: 15px;
+
+    color: #245c37;
+}
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.error-message {
+    display: none;
+
+    margin: 20px 30px 0;
+
+    padding: 13px 15px;
+
+    border-radius: 7px;
+
+    background: #fff0f0;
+
+    border: 1px solid #e2b0b0;
+
+    color: #b63232;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   BILL SUMMARY
+   ===================================================== */
+
+.summary {
+    margin: 25px 30px;
+
+    padding: 25px;
+
+    background: #f6faf7;
+
+    border: 1px solid #dce9df;
+
+    border-radius: 10px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+}
+
+
+.summary-left h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.summary-left p {
+    color: #718078;
+
+    font-size: 13px;
+
+    max-width: 350px;
+
+    line-height: 1.6;
+}
+
+
+.summary-right {
+    max-width: 380px;
+
+    width: 100%;
+
+    margin-left: auto;
+}
+
+
+.summary-line {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    font-size: 14px;
+}
+
+
+.discount-line strong {
+    color: #d35454;
+}
+
+
+.divider {
+    height: 1px;
+
+    background: #d7e2da;
+
+    margin: 8px 0;
+}
+
+
+.final-line {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+
+.final-line span {
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.final-line strong {
+    color: #1e7138;
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.buttons {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 0 30px 30px;
+}
+
+
+.calculate-btn,
+.clear-btn {
+    padding: 13px 22px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.calculate-btn {
+    flex: 1;
+
+    border: none;
+
+    background: #173d2b;
+
+    color: white;
+}
+
+
+.calculate-btn:hover {
+    background: #286443;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 15px rgba(23,61,43,0.2);
+}
+
+
+.clear-btn {
+    width: 120px;
+
+    border: 1px solid #cbd6cf;
+
+    background: white;
+
+    color: #59665f;
+}
+
+
+.clear-btn:hover {
+    background: #f1f4f2;
+}
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+   ===================================================== */
+
+.success-message {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 22px 25px;
+
+    background: #eaf8ee;
+
+    border: 1px solid #a9d8b5;
+
+    border-radius: 12px;
+
+    align-items: center;
+
+    gap: 18px;
+
+    animation: showMessage 0.4s ease;
+}
+
+
+.success-icon {
+    width: 48px;
+
+    height: 48px;
+
+    background: #32864a;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.success-message h2 {
+    color: #286c3d;
+
+    font-size: 18px;
+}
+
+
+.success-message p {
+    color: #587061;
+
+    font-size: 13px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    background: #173d2b;
+
+    color: #aabdb1;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   ANIMATION
+   ===================================================== */
+
+@keyframes showMessage {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .table-header {
+        display: none;
+    }
+
+
+    .product-row {
+        grid-template-columns:
+            1.5fr 1fr;
+
+        gap: 15px;
+    }
+
+
+    .product-name {
+        grid-column: 1 / -1;
+    }
+
+
+    .amount {
+        text-align: right;
+    }
+
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .summary-right {
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .header {
+        padding: 18px 5%;
+    }
+
+
+    .container {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+
+    .page-heading h1 {
+        font-size: 34px;
+    }
+
+
+    .card-header {
+        padding: 20px;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .product-table {
+        padding: 0 20px;
+    }
+
+
+    .product-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .summary {
+        margin: 20px;
+
+        padding: 18px;
+    }
+
+
+    .buttons {
+        padding: 0 20px 20px;
+
+        flex-direction: column;
+    }
+
+
+    .clear-btn {
+        width: 100%;
+    }
+
+
+    .success-message {
+        align-items: flex-start;
+    }
+
+}
